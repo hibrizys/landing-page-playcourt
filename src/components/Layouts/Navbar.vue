@@ -7,7 +7,7 @@
   >
     <div class="container-fluid">
       <router-link class="navbar-brand" to="/">
-        <img class="black-logo" src="../../assets/img/logo.png" alt="Logo" />
+        <img class="black-logo" style="height: 40px;" src="../../assets/img/logo.png" alt="Logo" />
       </router-link>
 
       <div
