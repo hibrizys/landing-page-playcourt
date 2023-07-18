@@ -38,7 +38,7 @@
         </div>
         <div class="col-sm-6 col-lg-2">
           <div class="single-footer-widget ps-3">
-            <h3>Playcourt</h3>
+            <h3>PlayCourt</h3>
             <ul class="quick-link">
               <li>
                 <a @click="scroll('Overview')" href="javascript:void(0)">Overview</a>
@@ -73,7 +73,7 @@
             <h3>About Us</h3>
             <ul class="quick-link">
               <li>
-                <a @click="scroll('Overview')" href="javascript:void(0)">Playcourt</a>
+                <a @click="scroll('Overview')" href="javascript:void(0)">PlayCourt</a>
               </li>
               <li>
                 <a href="https://indigo.id/" target="_blank">IndigoHub Bandung</a>
@@ -113,7 +113,7 @@
           <div class="col-lg-6 col-md-6">
             <div class="copyright-item">
               <p>
-                &copy; Copyright {{ currentYear }} By <a href="#">Playcourt</a>
+                &copy; Copyright {{ currentYear }} By <a href="#">PlayCourt</a>
               </p>
             </div>
           </div>

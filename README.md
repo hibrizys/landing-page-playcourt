@@ -2,7 +2,7 @@
 
 ## Project Plan
 
-![Project Plan](https://raw.githubusercontent.com/hibrizys/landing-page-playcourt/main/src/assets/img/Project_Plan.png)
+![Project Plan](https://gitlab.playcourt.id/hibrizys/web-landing-page-vuejs/-/raw/f508d044ad7ac8cdd5080727fa188e0134ebe7a0/src/assets/img/Project_Plan.png)
 
 ## Project setup
 ```

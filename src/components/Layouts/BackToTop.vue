@@ -10,7 +10,7 @@
 <script>
 
 export default {
-    name: 'BackToTop',
+    name: 'AppBackToTop',
     data (){
         return {
             isTop: false
