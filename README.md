@@ -1,4 +1,4 @@
-# Playcourt Landing Page (VueJs)
+# Playcourt Landing Page 
 
 Project task from Telkom Indonesia (Digital Infrastructure & Security)
 
