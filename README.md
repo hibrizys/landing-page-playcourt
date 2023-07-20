@@ -2,6 +2,8 @@
 
 Project task from Telkom Indonesia (Digital Infrastructure & Security)
 
+![logo](https://raw.githubusercontent.com/hibrizys/landing-page-playcourt/main/src/assets/img/logo.png)
+
 ## Overview
 
 [PlayCourt](https://playcourt.id/) is a Platform as a Service (PaaS) serving as the Digital Infrastructure at the Digital Service Division of PT Telekomunikasi Indonesia. PlayCourt is a comprehensive application development platform specifically designed for the development of Telkom Indonesia's digital products.
@@ -29,7 +31,7 @@ Build image docker
 docker build -t playcourt .
 ```
 
-Run container docker
+Run container docker    
 ```
 docker run -p 8080:80 -it --name playcourt playcourt
 ```
