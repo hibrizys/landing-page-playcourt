@@ -21,10 +21,11 @@
         <i class="bi bi-x"></i>
       </div>
 
-      <div class="collapse navbar-collapse" :class="{ toggler: active }">
+      <div :class="{ 'collapse navbar-collapse': true, toggler: active }">
         <ul class="navbar-nav">
           <li class="nav-item">
             <a
+              data-testid="overview-link"
               class="nav-link"
               @click="scroll('Overview')"
               href="javascript:void(0)"
@@ -33,6 +34,7 @@
           </li>
           <li class="nav-item">
             <a
+              data-testid="features-link"
               class="nav-link"
               @click="scroll('Features')"
               href="javascript:void(0)"    
@@ -41,6 +43,7 @@
           </li>
           <li class="nav-item">
             <a
+              data-testid="how-to-link"
               class="nav-link"
               @click="scroll('Steps')"
               href="javascript:void(0)"
@@ -49,6 +52,7 @@
           </li>
           <li class="nav-item">
             <a
+              data-testid="order-link"
               class="nav-link"
               @click="scroll('Order')"
               href="javascript:void(0)"

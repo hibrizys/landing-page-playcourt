@@ -38,7 +38,10 @@ docker run -p 8080:80 -it --name playcourt playcourt
 
 ## Testing Unit
 
-Coming Soon!
+Run unit test component
+```
+npm run test:unit
+```
 
 ## Deploy
 
