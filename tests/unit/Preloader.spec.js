@@ -3,7 +3,7 @@ import { shallowMount } from '@vue/test-utils';
 import Preloader from '@/components/Layouts/Preloader.vue';
 
 describe('Preloader.vue', () => {
-  it('renders the Preloader component', () => {
+  test('renders the Preloader component', () => {
     // Mount the component
     const wrapper = shallowMount(Preloader);
 

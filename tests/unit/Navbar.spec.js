@@ -11,7 +11,7 @@ const wrapper = mount(Navbar, {
   },
 });
 describe("Navbar", () => {
-  it("renders correctly", () => {
+  test("renders correctly", () => {
     // Assert that the component renders without errors
     expect(wrapper.exists()).toBe(true);
 
@@ -26,7 +26,7 @@ describe("Navbar", () => {
     expect(wrapper.find(".side-nav .sign-up").exists()).toBe(true);
   });
 
-  it("toggles the mobile navigation menu", async () => {
+  test("toggles the mobile navigation menu", async () => {
     // The mobile menu should be initially closed
     expect(wrapper.find(".collapse").classes("toggler")).toBe(false);
 
@@ -43,15 +43,15 @@ describe("Navbar", () => {
     expect(wrapper.find(".collapse").classes("toggler")).toBe(false);
   });
 
-  it("initial value of isSticky should be false", () => {
+  test("initial value of isSticky should be false", () => {
     expect(wrapper.vm.isSticky).toBe(false);
   });
 
-  it("initial value of active should be false", () => {
+  test("initial value of active should be false", () => {
     expect(wrapper.vm.active).toBe(false);
   });
 
-  it("initial value of button_active_state should be false", () => {
+  test("initial value of button_active_state should be false", () => {
     expect(wrapper.vm.button_active_state).toBe(false);
   });
 });

@@ -1,10 +1,10 @@
 import { mount } from "@vue/test-utils";
-import Order from "@/components/Order.vue"; // Replace with the actual path to Order.vue
+import Order from "@/components/Order.vue"; 
 
 const wrapper = mount(Order);
 
 describe("Order", () => {
-  it("renders correctly", () => {
+  test("renders correctly", () => {
     // Assert that the component renders without errors
     expect(wrapper.exists()).toBe(true);
 
@@ -50,14 +50,14 @@ describe("Order", () => {
     expect(selectOptions[3].text()).toBe("100GB");
   });
 
-  it("selects the default option in the database storage select box", () => {
+  test("selects the default option in the database storage select box", () => {
     const selectBox = wrapper.find(".select-box select");
 
     // Assert that the default option is selected
     expect(selectBox.element.value).toBe("Default");
   });
 
-  it("updates the database storage select box value when an option is selected", async () => {
+  test("updates the database storage select box value when an option is selected", async () => {
     const selectBox = wrapper.find(".select-box select");
 
     // Select an option with value "25"
@@ -73,7 +73,7 @@ describe("Order", () => {
     expect(selectBox.element.value).toBe("100");
   });
 
-  it("displays the correct information for the Amazon Web Services feature item", () => {
+  test("displays the correct information for the Amazon Web Services feature item", () => {
     const awsFeature = wrapper.findAll(".why-choose-us-item")[0];
 
     expect(awsFeature.find("h3").text()).toBe("Amazon Web Services");
@@ -91,7 +91,7 @@ describe("Order", () => {
     );
   });
 
-  it("selects the default option in the database storage select box", () => {
+  test("selects the default option in the database storage select box", () => {
     const wrapper = mount(Order);
 
     const selectBox = wrapper.find(".select-box select");
@@ -100,7 +100,7 @@ describe("Order", () => {
     expect(selectBox.element.value).toBe("Default");
   });
 
-  it("updates the database storage select box value when an option is selected", async () => {
+  test("updates the database storage select box value when an option is selected", async () => {
     const selectBox = wrapper.find(".select-box select");
 
     // Select an option with value "25"

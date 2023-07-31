@@ -1,10 +1,10 @@
 import { mount } from "@vue/test-utils";
-import Features from "@/components/Features.vue"; // Replace with the actual path to Features.vue
+import Features from "@/components/Features.vue"; 
 
 const wrapper = mount(Features);
 
 describe("Features", () => {
-  it("renders correctly", () => {
+  test("renders correctly", () => {
     // Assert that the component renders without errors
     expect(wrapper.exists()).toBe(true);
 
@@ -29,7 +29,7 @@ describe("Features", () => {
     // Add similar assertions for other feature items if needed
   });
 
-  it("displays correct icon and text for the second feature item", () => {
+  test("displays correct icon and text for the second feature item", () => {
     const secondFeature = wrapper.findAll(".features-item")[1];
 
     expect(secondFeature.find(".features-icon i").classes("bi-box")).toBe(true);
@@ -39,7 +39,7 @@ describe("Features", () => {
     );
   });
 
-  it("displays correct icon and text for the third feature item", () => {
+  test("displays correct icon and text for the third feature item", () => {
     const thirdFeature = wrapper.findAll(".features-item")[2];
 
     expect(thirdFeature.find(".features-icon i").classes("bi-rulers")).toBe(
@@ -51,7 +51,7 @@ describe("Features", () => {
     );
   });
 
-  it("displays correct icon and text for the fourth feature item", () => {
+  test("displays correct icon and text for the fourth feature item", () => {
     const fourthFeature = wrapper.findAll(".features-item")[3];
 
     expect(
@@ -65,7 +65,7 @@ describe("Features", () => {
     );
   });
 
-  it("contains a container with specific classes", () => {
+  test("contains a container with specific classes", () => {
     const container = wrapper.find(".container");
 
     // Assert that the container has the correct classes

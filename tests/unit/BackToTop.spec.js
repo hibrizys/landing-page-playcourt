@@ -5,12 +5,12 @@ const wrapper = shallowMount(BackToTop);
 
 describe("BackToTop.vue", () => {
   // Test the rendering of the component
-  it("renders correctly", () => {
+  test("renders correctly", () => {
     expect(wrapper.exists()).toBe(true);
   });
 
   // Test if the back-to-top button triggers scroll to the top
-  it("scrolls to the top when clicked", () => {
+  test("scrolls to the top when clicked", () => {
     // Mock the scrollTo method of window object
     window.scrollTo = jest.fn();
 
