@@ -25,7 +25,6 @@
         <ul class="navbar-nav">
           <li class="nav-item">
             <a
-              data-testid="overview-link"
               class="nav-link"
               @click="scroll('Overview')"
               href="javascript:void(0)"
@@ -34,28 +33,25 @@
           </li>
           <li class="nav-item">
             <a
-              data-testid="features-link"
               class="nav-link"
               @click="scroll('Features')"
-              href="javascript:void(0)"    
+              href="javascript:void(1)"    
               >Features</a
             >
           </li>
           <li class="nav-item">
             <a
-              data-testid="how-to-link"
               class="nav-link"
               @click="scroll('Steps')"
-              href="javascript:void(0)"
+              href="javascript:void(2)"
               >How To</a
             >
           </li>
           <li class="nav-item">
             <a
-              data-testid="order-link"
               class="nav-link"
               @click="scroll('Order')"
-              href="javascript:void(0)"
+              href="javascript:void(3)"
               >Order</a
             >
           </li>
@@ -91,10 +87,12 @@ export default {
     });
   },
   methods: {
-    scroll(refName) {
-      const element = document.getElementById(refName);
-      element.scrollIntoView({ behavior: "smooth" });
-    },
+  scroll(refName) {
+    const element = document.getElementById(refName);
+    if (element) {
+      element.scrollIntoView({behavior: "smooth" });
+    }
   },
+},
 };
 </script>

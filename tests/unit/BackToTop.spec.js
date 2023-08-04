@@ -25,4 +25,27 @@ describe("BackToTop.vue", () => {
     // Expect scrollTo method to be called with (0, 0)
     expect(window.scrollTo).toHaveBeenCalledWith(0, 0);
   });
+
+  // Test if the 'mounted' hook sets the 'isTop' property correctly
+  test("mounted hook sets the isTop property correctly", () => {
+    // Set the initial scrollY value and trigger a scroll event
+    window.scrollY = 0;
+    window.dispatchEvent(new Event("scroll"));
+
+    // Wait for the next tick for the scroll event to be processed
+    return wrapper.vm.$nextTick().then(() => {
+      // Expect 'isTop' to be false since scrollY is 0
+      expect(wrapper.vm.isTop).toBe(false);
+
+      // Set the scrollY value to 200 and trigger another scroll event
+      window.scrollY = 200;
+      window.dispatchEvent(new Event("scroll"));
+
+      // Wait for the next tick for the scroll event to be processed
+      return wrapper.vm.$nextTick().then(() => {
+        // Expect 'isTop' to be true since scrollY is 200
+        expect(wrapper.vm.isTop).toBe(true);
+      });
+    });
+  });
 });

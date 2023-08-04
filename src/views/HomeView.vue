@@ -8,7 +8,6 @@
     <Footer/>
   </div>
 </template>
-
 <script >
 // @ is an alias to /src
 import Navbar from '@/components/Layouts/Navbar'

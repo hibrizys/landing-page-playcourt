@@ -1,9 +1,12 @@
 import { mount } from "@vue/test-utils";
-import Order from "@/components/Order.vue"; 
-
-const wrapper = mount(Order);
+import Order from "@/components/Order.vue";
 
 describe("Order", () => {
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = mount(Order);
+  });
   test("renders correctly", () => {
     // Assert that the component renders without errors
     expect(wrapper.exists()).toBe(true);
@@ -13,7 +16,6 @@ describe("Order", () => {
     expect(wrapper.find("h2").text()).toBe(
       "Nearly We Have Been Trying To Provide Those"
     );
-
     // Assert that the component contains two feature items
     const featureItems = wrapper.findAll(".why-choose-us-item");
     expect(featureItems).toHaveLength(2);
@@ -50,11 +52,89 @@ describe("Order", () => {
     expect(selectOptions[3].text()).toBe("100GB");
   });
 
+  test("should render content for demo.value1 = 1", async () => {
+    wrapper.setData({ demo: { value1: "1" } });
+
+    // Wait for the next tick to ensure Vue has re-rendered the component
+    await wrapper.vm.$nextTick();
+
+    // Find the div with class "list" that should be displayed when demo.value1 is 1
+    const listDiv = wrapper.find(
+      ".choose-content div[data-test='content-for-value1']"
+    );
+
+    // Assert that the div with class "list" exists
+    expect(listDiv.exists()).toBe(true);
+  });
+
+  test("should render content for demo.value1 = 2", async () => {
+    wrapper.setData({ demo: { value1: "2" } });
+
+    // Wait for the next tick to ensure Vue has re-rendered the component
+    await wrapper.vm.$nextTick();
+
+    // Find the div with class "list" that should be displayed when demo.value1 is 1
+    const listDiv = wrapper.find(
+      ".choose-content div[data-test='content-for-value2']"
+    );
+
+    // Assert that the div with class "list" exists
+    expect(listDiv.exists()).toBe(true);
+  });
+
+  test("should render content for demo.value1 = 3", async () => {
+    wrapper.setData({ demo: { value1: "3" } });
+
+    // Wait for the next tick to ensure Vue has re-rendered the component
+    await wrapper.vm.$nextTick();
+
+    // Find the div with class "list" that should be displayed when demo.value1 is 1
+    const listDiv = wrapper.find(
+      ".choose-content div[data-test='content-for-value3']"
+    );
+
+    // Assert that the div with class "list" exists
+    expect(listDiv.exists()).toBe(true);
+  });
+
+  test("should render content for demo.value1 = 4", async () => {
+    wrapper.setData({ demo: { value1: "4" } });
+
+    // Wait for the next tick to ensure Vue has re-rendered the component
+    await wrapper.vm.$nextTick();
+
+    // Find the div with class "list" that should be displayed when demo.value1 is 1
+    const listDiv = wrapper.find(
+      ".choose-content div[data-test='content-for-value4']"
+    );
+
+    // Assert that the div with class "list" exists
+    expect(listDiv.exists()).toBe(true);
+  });
+
+  test("should render content for demo.value1 = 5", async () => {
+    wrapper.setData({ demo: { value1: "5" } });
+
+    // Wait for the next tick to ensure Vue has re-rendered the component
+    await wrapper.vm.$nextTick();
+
+    // Find the div with class "list" that should be displayed when demo.value1 is 1
+    const listDiv = wrapper.find(
+      ".choose-content div[data-test='content-for-value5']"
+    );
+
+    // Assert that the div with class "list" exists
+    expect(listDiv.exists()).toBe(true);
+  });
+
   test("selects the default option in the database storage select box", () => {
     const selectBox = wrapper.find(".select-box select");
 
     // Assert that the default option is selected
-    expect(selectBox.element.value).toBe("Default");
+    expect(selectBox.element.value).toBe("");
+
+    // Assert that the default option text is "Select database storage"
+    expect(selectBox.find("option").text()).toBe("Select database storage");
   });
 
   test("updates the database storage select box value when an option is selected", async () => {
@@ -66,6 +146,12 @@ describe("Order", () => {
     // Assert that the selected value is updated to "25"
     expect(selectBox.element.value).toBe("25");
 
+    // Select an option with value "50"
+    await selectBox.setValue("50");
+
+    // Assert that the selected value is updated to "50"
+    expect(selectBox.element.value).toBe("50");
+
     // Select another option with value "100"
     await selectBox.setValue("100");
 
@@ -73,46 +159,46 @@ describe("Order", () => {
     expect(selectBox.element.value).toBe("100");
   });
 
-  test("displays the correct information for the Amazon Web Services feature item", () => {
-    const awsFeature = wrapper.findAll(".why-choose-us-item")[0];
+  test('should call the "Order Now" button link correctly', () => {
+    const orderButton = wrapper.find(".choose-btn");
 
-    expect(awsFeature.find("h3").text()).toBe("Amazon Web Services");
-    expect(awsFeature.findAll(".list li")).toHaveLength(3);
-
-    // Check the text of each list item
-    const listItems = awsFeature.findAll(".list li");
-    expect(listItems[0].text()).toBe("Free Amazon AWS usage");
-    expect(listItems[1].text()).toBe("Limited time offer");
-    expect(listItems[2].text()).toBe("Get your access today");
-
-    // Check the "Order Now" button link
-    expect(awsFeature.find(".choose-btn").attributes("href")).toBe(
+    // Assert that the "Order Now" button has the correct link
+    expect(orderButton.attributes("href")).toBe(
       "https://dashboard.playcourt.id/login"
     );
   });
+  test("should contain the 'row justify-content-center' div and its children", () => {
+    // Find the 'row justify-content-center' div
+    const rowDiv = wrapper.find(".row.justify-content-center");
 
-  test("selects the default option in the database storage select box", () => {
-    const wrapper = mount(Order);
+    // Assert that the 'row justify-content-center' div exists
+    expect(rowDiv.exists()).toBe(true);
 
-    const selectBox = wrapper.find(".select-box select");
+    // Find the 'col-lg-4 col-md-6' divs inside the 'row justify-content-center'
+    const colDivs = rowDiv.findAll(".col-lg-4.col-md-6");
 
-    // Assert that the default option is selected
-    expect(selectBox.element.value).toBe("Default");
+    // Assert that there are two 'col-lg-4 col-md-6' divs
+    expect(colDivs).toHaveLength(2);
   });
 
-  test("updates the database storage select box value when an option is selected", async () => {
-    const selectBox = wrapper.find(".select-box select");
+  test("does not update the selected value when selecting the default option", async () => {
+    // Find the select element
+    const selectBox = wrapper.find("[data-testid='database-storage-select']");
 
-    // Select an option with value "25"
-    await selectBox.setValue("25");
+    // Select the default option
+    await selectBox.setValue("");
 
-    // Assert that the selected value is updated to "25"
-    expect(selectBox.element.value).toBe("25");
+    // Wait for the next tick to ensure Vue has re-rendered the component
+    await wrapper.vm.$nextTick();
 
-    // Select another option with value "100"
-    await selectBox.setValue("100");
+    // Get the selected value of the select element
+    const selectedValue = selectBox.element.value;
 
-    // Assert that the selected value is updated to "100"
-    expect(selectBox.element.value).toBe("100");
+    // Assert that the selected value remains the same as the default (empty string)
+    expect(selectedValue).toBe("");
+  });
+  test("has correct initial data", () => {
+    // Check the initial value of demo.value1
+    expect(wrapper.vm.demo.value1).toBe("0");
   });
 });

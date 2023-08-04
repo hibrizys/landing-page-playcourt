@@ -19,7 +19,7 @@
           </div>
           <div class="col-lg-6 col-md-12">
             <div class="overview-image">
-              <img src="../assets/img/Overview2.png" alt="image" />
+              <img src="../assets/img/Overview2.png" alt="image" class="Overview2" />
             </div>
           </div>
         </div>

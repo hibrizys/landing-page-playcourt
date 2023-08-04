@@ -29,4 +29,24 @@ describe("App.vue", () => {
     });
     expect(wrapper.exists()).toBe(true);
   });
+
+  it("hides Preloader after the transition effect", async () => {
+    const wrapper = shallowMount(App, {
+      global: {
+        plugins: [router], // Use the mock router in the test
+      },
+    });
+
+    // Ensure that isLoading is initially true
+    expect(wrapper.vm.isLoading).toBe(true);
+
+    // Simulate the transition effect by setting isLoading to false
+    await wrapper.setData({ isLoading: false });
+
+    // Wait for the next tick of the event loop
+    await wrapper.vm.$nextTick();
+
+    // Ensure that isLoading is updated to false after the transition effect
+    expect(wrapper.vm.isLoading).toBe(false);
+  });
 });

@@ -5,7 +5,7 @@
         <div class="col-sm-6 col-lg-3">
           <div class="single-footer-widget">
             <div class="footer-logo" >
-              <a href="#">
+              <a :href="'#'">
                 <img src="../../assets/img/logo2.png" alt="Logo"  />
               </a>
               <p>
@@ -13,23 +13,23 @@
               </p>
               <ul class="footer-social">
                 <li>
-                  <a target="_blank" href="https://www.facebook.com/TelkomIndonesia">
-                    <i class="bi bi-facebook" style=" padding-left: 1px"></i>
+                  <a :href="'https://www.facebook.com/TelkomIndonesia'">
+                    <i class="bi-facebook" style=" padding-left: 1px"></i>
                   </a>
                 </li>
                 <li>
-                  <a target="_blank" href="https://twitter.com/telkomindonesia">
-                    <i class="bi bi-twitter" style=" padding-left: 1px"></i>
+                  <a :href="'https://twitter.com/telkomindonesia'">
+                    <i class="bi-twitter" style=" padding-left: 1px"></i>
                   </a>
                 </li>
                 <li>
-                  <a target="_blank" href="https://www.linkedin.com/company/telekomunikasi-indonesia/">
-                    <i class="bi bi-linkedin" style=" padding-left: 1px"></i>
+                  <a :href="'https://www.linkedin.com/company/telekomunikasi-indonesia/'">
+                    <i class="bi-linkedin" style=" padding-left: 1px"></i>
                   </a>
                 </li>
                 <li>
-                  <a target="_blank" href="https://www.instagram.com/telkomindonesia">
-                    <i class="bi bi-instagram" style=" padding-left: 1px"></i>
+                  <a :href="'https://www.instagram.com/telkomindonesia'">
+                    <i class="bi-instagram" style=" padding-left: 1px"></i>
                   </a>
                 </li>
               </ul>
@@ -41,16 +41,16 @@
             <h3>PlayCourt</h3>
             <ul class="quick-link">
               <li>
-                <a @click="scroll('Overview')" href="javascript:void(0)">Overview</a>
+                <a  @click="scroll('Overview')" :href="'javascript:void(0)'">Overview</a>
               </li>
               <li>
-                <a @click="scroll('Features')" href="javascript:void(0)">Features</a>
+                <a  @click="scroll('Features')" :href="'javascript:void(1)'">Features</a>
               </li>
               <li>
-                <a @click="scroll('Steps')" href="javascript:void(0)">How To</a>
+                <a  @click="scroll('Steps')" :href="'javascript:void(2)'">How To</a>
               </li>
               <li>
-                <a @click="scroll('Order')" href="javascript:void(0)">Order</a>
+                <a  @click="scroll('Order')" :href="'javascript:void(3)'">Order</a>
               </li>
             </ul>
           </div>
@@ -60,10 +60,10 @@
             <h3>Company</h3>
             <ul class="quick-link">
               <li>
-                <a href="https://www.telkom.co.id/sites" target="_blank">Telkom Indonesia</a>
+                <a :href="'https://www.telkom.co.id/sites'" target="_blank">Telkom Indonesia</a>
               </li>
               <li>
-                <a href="https://www.telkom.co.id/sites/about-telkom/id_ID/page/profil-dan-riwayat-singkat-22" target="_blank">About Telkom</a>
+                <a :href="'https://www.telkom.co.id/sites/about-telkom/id_ID/page/profil-dan-riwayat-singkat-22'" target="_blank">About Telkom</a>
               </li>
             </ul>
           </div>
@@ -73,13 +73,13 @@
             <h3>About Us</h3>
             <ul class="quick-link">
               <li>
-                <a @click="scroll('Overview')" href="javascript:void(0)">PlayCourt</a>
+                <a @click="scroll('Overview')" :href="'javascript:void(0)'">PlayCourt</a>
               </li>
               <li>
-                <a href="https://indigo.id/" target="_blank">IndigoHub Bandung</a>
+                <a :href="'https://indigo.id/'" target="_blank">IndigoHub Bandung</a>
               </li>
               <li>
-                <a href="https://goo.gl/maps/ueSL6AgzaXVetdw8A"
+                <a :href="'https://goo.gl/maps/ueSL6AgzaXVetdw8A'"
                   >Jl. Gegerkalong Hilir No.47 Kota Bandung, Jawa Barat 40152</a
                 >
               </li>
@@ -91,18 +91,18 @@
             <h3>Contact Us</h3>
             <ul class="address-info">
               <li>
-                <i class="bi bi-telephone-outbound"></i>
-                <a href="tel:+62 822 2800 0720">+62 822 2800 0720</a>
+                <i class="bi-telephone-outbound"></i>
+                <a :href="'tel:+6282228000720'">+62 822 2800 0720</a>
               </li>
               <li>
-                <i class="bi bi-book"></i>
-                <a href="mailto:Helpdeskdxb@telkom.co.id"
+                <i class="bi-book"></i>
+                <a :href="'mailto:Helpdeskdxb@telkom.co.id'"
                   >Helpdeskdxb@telkom.co.id</a
                 >
               </li>
               <li>
                 <i class="bi bi-telegram"></i>
-                <a href="https://t.me/helpdeskdb_bot">helpdeskdb_bot</a>
+                <a :href="'https://t.me/helpdeskdb_bot'">helpdeskdb_bot</a>
               </li>
             </ul>
           </div>
@@ -132,21 +132,22 @@ export default {
     };
   },
   mounted() {
-    const that = this;
     window.addEventListener("scroll", () => {
-      let scrollPos = window.scrollY;
-      if (scrollPos >= 100) {
-        that.isSticky = true;
+      if (window.scrollY >= 100) {
+        this.isSticky = true;
       } else {
-        that.isSticky = false;
+        this.isSticky = false;
       }
     });
   },
   methods: {
-    scroll(refName) {
-      const element = document.getElementById(refName);
-      element.scrollIntoView({ behavior: "smooth" });
-    },
+  scroll(refName) {
+    const element = document.getElementById(refName);
+    if (element) {
+      element.scrollIntoView({ top: element.offsetTop, behavior: "smooth" });
+    }
   },
+},
+
 };
 </script>

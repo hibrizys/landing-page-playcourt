@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: playcourt-deployment
+spec:
+  selector:
+    matchLabels:
+      app: web-landing-page-playcourt
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: web-landing-page-playcourt
+    spec:
+      containers:
+      - name: web-landing-page-playcourt
+        image: hibrizys/playcourt
+        ports:
+          - containerPort: 80

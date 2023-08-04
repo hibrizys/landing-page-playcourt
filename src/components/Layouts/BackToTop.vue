@@ -6,7 +6,6 @@
         <i class="bi bi-arrow-up-short"></i>
     </div>
 </template>
-
 <script>
 
 export default {
