@@ -13,6 +13,7 @@
             </div>
             <div class="choose-content">
               <h3 class="aws">Amazon Web Services</h3>
+              <h1 class="free" style="font-size: 97.75px">FREE</h1>
               <ul class="list">
                 <li>
                   <i class="bi-check-circle"></i> Free Amazon AWS usage
@@ -88,7 +89,7 @@
                   <li>
                     <i class="bi-check-circle"></i
                     ><strong
-                      >High-traffic Web Server</strong
+                      >High-traffic Web Server with Varying Resources</strong
                     >
                   </li>
                 </ul>
@@ -106,7 +107,7 @@
                   <li>
                     <i class="bi-check-circle"></i
                     ><strong
-                      >High-traffic Web Server</strong
+                      >High-traffic Web Server with Varying Resources</strong
                     >
                   </li>
                 </ul>

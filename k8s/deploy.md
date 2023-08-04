@@ -45,7 +45,7 @@ localhost:<yourport>
 
 - go to GCP and make project
 
-![Project GCP](/src/assets/img/documentation/projectGCP.png)
+![Project GCP](src/assets/img/documentation/projectGCP.png)
 
 - go to Google Kubernetes Engine and create Cluster
 
@@ -53,17 +53,17 @@ localhost:<yourport>
 
 - set the region to Asia-Southeast2 (Jakarta) and for the networking set to public cluster
 
-![GKE Autopilot](/src/assets/img/documentation/GKE.png)
+![GKE Autopilot](src/assets/img/documentation/GKE.png)
 
 - create the cluster
 
 - click the cluster that u've made it, and go to connect
 
-![Edit Cluster](/src/assets/img/documentation/editCluster.png)
+![Edit Cluster](src/assets/img/documentation/editCluster.png)
 
 - connect the cluster on your terminal local
 
-![Connect cluster](/src/assets/img/documentation/connectCluster.png)
+![Connect cluster](src/assets/img/documentation/connectCluster.png)
 
 - to check our new namespaces got to 
 ```sh
@@ -98,8 +98,8 @@ Wallaa!! the external IP is there
 
 - Postman External IP
 
-![External IP](/src/assets/img/documentation/ExternalIP.png)
+![External IP](src/assets/img/documentation/ExternalIP.png)
 
 - Google Kubernetes Engine Configuration
 
-![GKE Config](/src/assets/img/documentation/Configuration.png)
+![GKE Config](src/assets/img/documentation/Configuration.png)

@@ -27,13 +27,10 @@
                 >
                   <div class="accordion-body">
                     <p class="bold">
-                      Donec sollicitudin molestie malesuada. Vivamus magna
-                      justo, lacinia eget consectetur sed, convallis at tellus.
+                      Choose your preferred programming language for the application development. This step involves selecting the programming language that best suits the requirements and objectives of your project.
                     </p>
                     <p>
-                      pretium ut lacinia in, elementum id enim. Pellentesque in
-                      ipsum id orci porta dapibus. Sed porttitor lectus nibh.
-                      Nulla quis lorem libero malesuada.
+                      After considering various factors such as project scope, team expertise, and performance considerations, finalize the programming language that will be the foundation of your application development.
                     </p>
                   </div>
                 </div>
@@ -56,13 +53,10 @@
                 >
                   <div class="accordion-body">
                     <p class="bold">
-                      Donec sollicitudin molestie malesuada. Vivamus magna
-                      justo, lacinia eget consectetur sed, convallis at tellus.
+                      Configure the topology of your application's infrastructure. This includes setting up the network architecture, defining the relationship between different components, and establishing the communication protocols.
                     </p>
                     <p>
-                      pretium ut lacinia in, elementum id enim. Pellentesque in
-                      ipsum id orci porta dapibus. Sed porttitor lectus nibh.
-                      Nulla quis lorem libero malesuada.
+                      By defining the topology, you ensure that your application's components are properly connected and function as a cohesive system, optimizing performance and resource utilization.
                     </p>
                   </div>
                 </div>
@@ -85,13 +79,10 @@
                 >
                   <div class="accordion-body">
                     <p class="bold">
-                      Donec sollicitudin molestie malesuada. Vivamus magna
-                      justo, lacinia eget consectetur sed, convallis at tellus.
+                      Determine the CPU and RAM limitations for your application's containers. Assess the resource requirements of each container and allocate appropriate CPU and RAM resources to ensure optimal performance.
                     </p>
                     <p>
-                      pretium ut lacinia in, elementum id enim. Pellentesque in
-                      ipsum id orci porta dapibus. Sed porttitor lectus nibh.
-                      Nulla quis lorem libero malesuada.
+                      By carefully managing CPU and RAM limitations, you can prevent resource contention and maintain stability in your application's execution environment. This step ensures that each container operates efficiently within its allocated resources.
                     </p>
                   </div>
                 </div>

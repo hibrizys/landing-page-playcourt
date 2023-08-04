@@ -5719,12 +5719,12 @@ fieldset:disabled .btn {
 .link-secondary:hover {
   color: #565e64 !important;
 }
-.link-success {
-  color: #198754 !important;
+.free {
+  color: #889a96!important;
 }
-.link-success:focus,
-.link-success:hover {
-  color: #146c43 !important;
+.free:focus,
+.free:hover {
+  color: #5f6e67 !important;
 }
 .link-info {
   color: #0dcaf0 !important;
@@ -11480,10 +11480,16 @@ button:focus {
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+  .overview-content {
+    top: 0;
+  }
+
   .col-lg-6 {
     flex: 0 0 auto;
     width: 100%;
   }
+  
   .navbar-light {
     padding-left: 15px;
     padding-right: 15px;
