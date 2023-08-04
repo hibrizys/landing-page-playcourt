@@ -45,7 +45,7 @@ localhost:<yourport>
 
 - go to GCP and make project
 
-![Project GCP](src/assets/img/documentation/projectGCP.png)
+![Project GCP](/src/assets/img/documentation/projectGCP.png)
 
 - go to Google Kubernetes Engine and create Cluster
 
