@@ -2,7 +2,7 @@
 
 Project task from Telkom Indonesia (Digital Infrastructure & Security)
 
-![logo](https://gitlab.playcourt.id/hibrizys/web-landing-page-playcourt/-/raw/master/src/assets/img/logo.png)
+![logo](src/assets/img/logo.png)
 
 ## Overview
 
@@ -10,7 +10,7 @@ Project task from Telkom Indonesia (Digital Infrastructure & Security)
 
 ## Project Plan
 
-![Project Plan](https://gitlab.playcourt.id/hibrizys/web-landing-page-playcourt/-/raw/master/src/assets/img/documentation/Project_Plan.png)
+![Project Plan](src/assets/img/documentation/Project_Plan.png)
 
 ## Run as NodeJs
 
@@ -53,9 +53,14 @@ Run unit test component
 npm run test:unit
 ```
 
+Run unit test with coverage
+```sh
+npm run coverage
+```
+
 Output of Unit testing:
 
-![Output Testing](https://gitlab.playcourt.id/hibrizys/web-landing-page-playcourt/-/raw/master/src/assets/img/documentation/Testing.png)
+![Output Testing](src/assets/img/documentation/Testing.png)
 
 ## Deployment
 
@@ -65,7 +70,5 @@ You can see link deploy with Netlify (NodeJs) in [here](https://playcourt.netlif
 
 ### Google Kubernetes Engine
 
-- You can see link deploy with GKE (Docker) in [here](http://34.128.107.121/)
-
-How to deploy on [Google Kubernetes Engine](https://gitlab.playcourt.id/hibrizys/web-landing-page-playcourt/-/blob/master/k8s/deploy.md)
+How to deploy on [Google Kubernetes Engine](https://github.com/hibrizys/landing-page-playcourt/blob/main/k8s/deploy.md)
 
