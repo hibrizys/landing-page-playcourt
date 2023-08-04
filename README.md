@@ -1,4 +1,4 @@
-# Playcourt Landing Page (Node Js v16.16.0)
+# Playcourt Landing Page
 
 Project task from Telkom Indonesia (Digital Infrastructure & Security)
 
@@ -11,6 +11,10 @@ Project task from Telkom Indonesia (Digital Infrastructure & Security)
 ## Project Plan
 
 ![Project Plan](src/assets/img/documentation/Project_Plan.png)
+
+## Prerequisites
+
+You will need [Node.js](https://nodejs.org/ja/blog/release/v16.16.0) version 16.16.0 or greater installed on your system.
 
 ## Run as NodeJs
 
