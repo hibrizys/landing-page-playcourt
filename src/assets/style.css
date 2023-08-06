@@ -11494,6 +11494,11 @@ button:focus {
     padding-left: 15px;
     padding-right: 15px;
   }
+
+  .navbar-light .navbar-nav {
+    margin-left: auto;
+    margin-right: 300px;
+  }
   .navbar-light .navbar-nav .nav-link {
     margin-right: 10px;
     margin-left: 10px;
@@ -11504,14 +11509,16 @@ button:focus {
     margin-left: 10px;
     margin-right: 10px;
   }
-  .main-navbar .navbar.navbar-light .others-option .option-item .call-btn,
-  .main-navbar
-    .navbar.navbar-style-two.navbar-light
-    .others-option
-    .option-item
-    .call-btn {
+  .main-navbar .navbar.navbar-light{
     display: none;
   }
+
+  .main-navbar.navbar .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 950px;
+}
+
   .single-footer-widget h3 {
     font-size: 18px;
   }
@@ -11524,7 +11531,7 @@ button:focus {
   .why-choose-us-item {
     padding: 20px;
   }
-  .slider {
+  .why-choose-us-item .slider {
     margin-top:15px;
     padding-right: 270px;
   }
