@@ -1,6 +1,6 @@
 # Playcourt Landing Page
 
-Project task from Telkom Indonesia (Digital Infrastructure & Security)
+Intern Project task from Telkom Indonesia (Digital Infrastructure & Security)
 
 ![logo](src/assets/img/logo.png)
 
